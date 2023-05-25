@@ -1,0 +1,72 @@
+/* General styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+   color: #5c94e8;
+}
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: #fff;
+}
+
+/* Form styles */
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   padding: 40px;
+   width: 80%;
+   max-width: 800px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"] {
+   width: 100%;
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   margin-bottom: 20px;
+   font-size: 16px;
+   background-color: #f0f0f0;
+}
+label:has(+ input[required]):before{
+   content: "*";
+   color: red;
+ }
+ 
+
+input[type="submit"] {
+   background-color: #5c94e8;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+/* Section styles */
+.input_section {
+   margin-bottom: 40px;
+   width: 100%;
+}
+
+.input_header {
+   margin-bottom: 10px;
+   font-size: 24px;
+   font-weight: bold;
+   color: #151b24;
+}

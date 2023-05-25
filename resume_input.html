@@ -1,0 +1,310 @@
+<!-- A html page to allow the user to input all fields of a resume in plain text. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Resume Input</title>
+   <link rel="stylesheet" type="text/css" href="/text_input_styles.css">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Arial, sans-serif;
+         color: #5c94e8;
+      }
+      body {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         min-height: 100vh;
+         background-color: #fff;
+      }
+      
+      /* Form styles */
+      form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         background-color: #fff;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         padding: 40px;
+         width: 80%;
+         max-width: 800px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="file"] {
+         width: 100%;
+         padding: 10px;
+         border-radius: 5px;
+         border: none;
+         margin-bottom: 20px;
+         font-size: 16px;
+         background-color: #f0f0f0;
+      }
+      label:has(+ input[required]):before{
+         content: "*";
+         color: red;
+       }
+       
+      
+      input[type="submit"] {
+         background-color: #5c94e8;
+         color: #fff;
+         border: none;
+         padding: 10px 20px;
+         font-size: 16px;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+      
+      /* Section styles */
+      .input_section {
+         margin-bottom: 40px;
+         width: 100%;
+      }
+      
+      .input_header {
+         margin-bottom: 10px;
+         font-size: 24px;
+         font-weight: bold;
+         color: #151b24;
+      }
+   </style>
+</head>
+<body>
+   <!-- form for user's preferred name to be used on generated portfolio page -->
+   <form id="resumeForm" action="/contacts" method="POST">
+
+      <section class="input_section profile_section">
+         <h3 class="input_header">Profile</h3>
+      <label for="profile_image1">Profile Image</label>
+      <input type="file" name="profile_image" id="profile_image1" required>
+      </section>
+      <!-- maybe revise each of these inputs to include captions in order for user to know what information to enter -->
+      <section class="input_section name_section">
+      <h3 class="input_header">Name</h3>
+      <label for="first_name1">First Name</label>
+      <input type="text" name="first_name" id="first_name1" required>
+      <label for="middle_initial1">Middle Initial</label>
+      <input type="text" name="middle_initial" id="middle_initial1">
+      <label for="last_name1">Last Name</label>
+      <input type="text" name="last_name" id="last_name1" required>
+      </section>
+      <section class="input_section contact_section">
+      <h3 class="input_header">Contact Information</h3>
+      <label for="email1">Email</label>
+      <input type="email" name="email" id="email1" required>
+      <label for="phone_number1">Phone Number</label>
+      <input type="tel" name="phone_number" id="phone_number1" required>
+      <label for="address1">Address</label>
+      <input type="text" name="address" id="address1">
+      <label for="city1">City</label>
+      <input type="text" name="city" id="city1" required>
+      <label for="state1">State</label>
+      <input type="text" name="state" id="state1" required>
+      </section>
+      <section class="input_section objectives_section">
+         <h3 class="input_header">Objectives</h3>
+      <label for="objective1">Primary Objective</label>
+      <input type="text" name="objective" id="objective1" required>
+      <label for="objective2">Guiding Objective</label>
+      <input type="text" name="objective" id="objective2" required>
+      <label for="objective3">Guiding Objective</label>
+      <input type="text" name="objective" id="objective3">
+      <label for="objective4">Guiding Objective</label>
+      <input type="text" name="objective" id="objective4">
+      </section>
+      <section class="input_section education_section">
+         <h3 class="input_header">Post Secondary Education</h3>
+      <label for="school_name1">School Name</label>
+      <input type="text" name="school_name" id="school_name1">
+      <label for="school_location1">School Location</label>
+      <input type="text" name="school_location" id="school_location1">
+      <label for="degree1">Degree</label>
+      <input type="text" name="degree" id="degree1">
+      <label for="major1">Major</label>
+      <input type="text" name="major" id="major1">
+      <label for="minor1">Minor</label>
+      <input type="text" name="minor" id="minor1">
+      <label for="gpa1">GPA</label>
+      <input type="text" name="gpa" id="gpa1">
+      <label for="graduation_date1">Graduation Date</label>
+      <input type="date" name="graduation_date" id="graduation_date1">
+      </section>
+      <section class="input_section work_experience_section">
+         <h3 class="input_header">Work Experience 1</h3>
+      <label for="job_title1">Job Title</label>
+      <input type="text" name="job_title" id="job_title1">
+      <label for="start_date1">Start Date</label>
+      <input type="date" name="start_date" id="start_date1">
+      <label for="end_date1">End Date</label>
+      <input type="date" name="end_date" id="end_date1">
+      <label for="job_description1">Job Description</label>
+      <input type="text" name="job_description" id="job_description1">
+      <h3 class="input_header">Work Experience 2</h3>
+      <label for="job_title2">Job Title</label>
+      <input type="text" name="job_title" id="job_title2">
+      <label for="start_date2">Start Date</label>
+      <input type="date" name="start_date" id="start_date2">
+      <label for="end_date2">End Date</label>
+      <input type="date" name="end_date" id="end_date2">
+      <label for="job_description2">Job Description</label>
+      <input type="text" name="job_description" id="job_description2">
+      <h3 class="input_header">Work Experience 3</h3>
+      <label for="job_title3">Job Title</label>
+      <input type="text" name="job_title" id="job_title3">
+      <label for="company_name3">Company Name</label>
+      <input type="text" name="company_name" id="company_name3">
+      <label for="start_date3">Start Date</label>
+      <input type="date" name="start_date" id="start_date3">
+      <label for="end_date3">End Date</label>
+      <input type="date" name="end_date" id="end_date3">
+      <label for="job_description3">Job Description</label>
+      <input type="text" name="job_description" id="job_description3">
+      </section>
+      <section class="input_section skills_section">
+         <h3 class="input_header">Skills</h3>
+      <label for="skill1">Skill 1</label>
+      <input type="text" name="skill" id="skill1" required>
+      <label for="skill2">Skill 2</label>
+      <input type="text" name="skill" id="skill2" required>
+      <label for="skill3">Skill 3</label>
+      <input type="text" name="skill" id="skill3" required>
+      <label for="skill4">Skill 4</label>
+      <input type="text" name="skill" id="skill4">
+      <label for="skill5">Skill 5</label>
+      <input type="text" name="skill" id="skill5">
+      <label for="skill6">Skill 6</label>
+      <input type="text" name="skill" id="skill6">
+      <label for="skill7">Skill 7</label>
+      <input type="text" name="skill" id="skill7">
+      <label for="skill8">Skill 8</label>
+      <input type="text" name="skill" id="skill8">
+      <label for="skill9">Skill 9</label>
+      <input type="text" name="skill" id="skill9">
+      </section>
+      <section class="input_section projects_section">
+         <h3 class="input_header">Projects</h3>
+      <label for="project_title1">Project 1 Title</label>
+      <input type="text" name="project_title" id="project_title1">
+      <label for="project_description1">Project 1 Description</label>
+      <input type="text" name="project_description" id="project_description1">
+      <label for="project_link1">Project 1 Link</label>
+      <input type="text" name="project_link" id="project_link1">
+      <label for="project_title2">Project 2 Title</label>
+      <input type="text" name="project_title" id="project_title2">
+      <label for="project_description2">Project 2 Description</label>
+      <input type="text" name="project_description" id="project_description2">
+      <label for="project_link2">Project 2 Link</label>
+      <input type="text" name="project_link" id="project_link2">
+      <label for="project_title3">Project 3 Title</label>
+      <input type="text" name="project_title" id="project_title3">
+      <label for="project_description3">Project 3 Description</label>
+      </section>
+      <section class="input_section awards_section">
+         <h3 class="input_header">Awards</h3>
+      <label for="award1">Award 1</label>
+      <input type="text" name="award" id="award1">
+      <label for="award2">Award 2</label>
+      <input type="text" name="award" id="award2">
+      <label for="award3">Award 3</label>
+      <input type="text" name="award" id="award3">
+      </section>
+      <section class="input_section certifications_section">
+         <h3 class="input_header">Certifications</h3>
+      <label for="certification1">Certification 1</label>
+      <input type="text" name="certification" id="certification1">
+      <label for="certification2">Certification 2</label>
+      <input type="text" name="certification" id="certification2">
+      <label for="certification3">Certification 3</label>
+      <input type="text" name="certification" id="certification3">
+      <label for="certification4">Certification 4</label>
+      <input type="text" name="certification" id="certification4">
+      <label for="certification5">Certification 5</label>
+      <input type="text" name="certification" id="certification5">
+      </section>
+      <section class="input_section volunteer_section">
+         <h3 class="input_header">Volunteer Experience</h3>
+      <label for="volunteer_title1">Volunteer Title</label>
+      <input type="text" name="volunteer_title" id="volunteer_title1">
+      <label for="volunteer_organization1">Volunteer Organization</label>
+      <input type="text" name="volunteer_organization" id="volunteer_organization1">
+      <label for="volunteer_start_date1">Start Date</label>
+      <input type="date" name="volunteer_start_date" id="volunteer_start_date1">
+      <label for="volunteer_end_date1">End Date</label>
+      <input type="date" name="volunteer_end_date" id="volunteer_end_date1">
+      <label for="volunteer_description1">Volunteer Description</label>
+      <input type="text" name="volunteer_description" id="volunteer_description1">
+      </section>
+      <section class="input_section languages_section">
+         <h3 class="input_header">Languages</h3>
+      <label for="language1">Language 1</label>
+      <input type="text" name="language" id="language1" required>
+      <label for="language2">Language 2</label>
+      <input type="text" name="language" id="language2">
+      <label for="language3">Language 3</label>
+      <input type="text" name="language" id="language3">
+      </section>
+      <section class="input_section references_section">
+         <h3 class="input_header">References</h3>
+      <label for="reference1">Reference 1</label>
+      <input type="text" name="reference" id="reference1" required>
+      <label for="reference2">Reference 2</label>
+      <input type="text" name="reference" id="reference2" required>
+      <label for="reference3">Reference 3</label>
+      <input type="text" name="reference" id="reference3" required>
+      <label for="reference4">Reference 4</label>
+      <input type="text" name="reference" id="reference4">
+      <label for="reference5">Reference 5</label>
+      <input type="text" name="reference" id="reference5">
+      </section>
+      <button type="submit">Submit</button>
+   </form>
+
+   <script>
+      document.getElementById("resumeForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+    
+        // Collect the form data
+        var formData = new FormData(this);
+    
+        // Create an HTTP request
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/contacts", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+    
+        // Define the callback function when the request is complete
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            // Request was successful
+            console.log(xhr.responseText);
+          } else {
+            // Request failed
+            console.error("Request failed. Status: " + xhr.status);
+          }
+        };
+    
+        // Convert the form data to JSON format
+        var jsonData = {};
+        formData.forEach(function (value, key) {
+          jsonData[key] = value;
+        });
+    
+        // Send the request with the JSON data
+        xhr.send(JSON.stringify(jsonData));
+      });
+    </script>
+    
+
+</body>
+</html>

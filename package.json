@@ -1,0 +1,19 @@
+{
+  "name": "profolio-caleb_feature1",
+  "version": "1.0.0",
+  "description": "## Overview Profolio allows users to within minutes have a personalized career portfolio website after uploading their resume. Hiring managers have been shown to favor candidates who showcase their work on a personalized website, but most people don't have time to build a website from scratch when searching for a job.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "nodemon": "^2.0.22"
+  }
+}

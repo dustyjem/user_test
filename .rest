@@ -1,0 +1,103 @@
+POST http://localhost:3535/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "profile_image": "profile_image.jpg",
+    "first_name": "John",
+    "middle_initial": "D",
+    "last_name": "Doe",
+    "email": "johndoe@example.com",
+    "phone_number": "123-456-7890",
+    "address": "123 Main Street",
+    "city": "Anytown",
+    "state": "Anystate",
+    "objective": [
+      "Seeking a challenging position in a dynamic company",
+      "Developing skills in web development",
+      "Contributing to a team-oriented work environment",
+      ""
+    ],
+    "school_name": "University of Example",
+    "school_location": "Anytown",
+    "degree": "Bachelor of Science",
+    "major": "Computer Science",
+    "minor": "Business Administration",
+    "gpa": "3.8",
+    "graduation_date": "2022-05-31",
+    "job_title": [
+      "Software Developer",
+      "Intern",
+      "Web Designer"
+    ],
+    "start_date": [
+      "2021-01-01",
+      "2020-06-01",
+      "2019-09-01"
+    ],
+    "end_date": [
+      "2022-12-31",
+      "2020-12-31",
+      "2020-05-31"
+    ],
+    "job_description": [
+      "Developed web applications using HTML, CSS, and JavaScript",
+      "Assisted with testing and debugging software",
+      "Designed user interfaces and implemented responsive layouts"
+    ],
+    "skill": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "Problem Solving",
+      "Communication"
+    ],
+    "project_title": [
+      "Online Shopping Website",
+      "Inventory Management System",
+      "Personal Portfolio Website"
+    ],
+    "project_description": [
+      "Developed a fully functional e-commerce website using PHP and MySQL",
+      "Created a system to track inventory and generate reports",
+      "Designed and implemented a responsive portfolio website to showcase projects"
+    ],
+    "project_link": [
+      "https://example.com/shopping",
+      "",
+      "https://example.com/portfolio"
+    ],
+    "award": [
+      "Outstanding Employee of the Year",
+      "Academic Excellence Award",
+      ""
+    ],
+    "certification": [
+      "Certified Scrum Master",
+      "AWS Certified Developer",
+      "Google Analytics Certified",
+      "Microsoft Certified Professional",
+      ""
+    ],
+    "volunteer_title": "Tutor",
+    "volunteer_organization": "Community Center",
+    "volunteer_start_date": "2018-05-01",
+    "volunteer_end_date": "2020-12-31",
+    "volunteer_description": "Provided academic support to students in various subjects",
+    "language": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "reference": [
+      "Jane Smith, Manager",
+      "John Johnson, Colleague",
+      "Sarah Williams, Professor",
+      "",
+      ""
+    ]
+  }
+  

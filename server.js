@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors'); // Import the 'cors' package
 
 const contactsRouter = require('./routes/contacts');
 
 app.use(express.json()); // Parse JSON-encoded bodies
 app.use('/contacts', contactsRouter);
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Serve the HTML file containing the form
 app.get('/', function (req, res) {

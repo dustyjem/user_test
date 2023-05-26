@@ -1,15 +1,19 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const cors = require('cors'); // Import the 'cors' package
+const bodyParser = require('body-parser');
 
 const contactsRouter = require('./routes/contacts');
 
-app.use(express.json()); // Parse JSON-encoded bodies
-app.use('/contacts', contactsRouter);
+app.use(bodyParser.json());
 
-// Enable CORS for all routes
-app.use(cors());
+// Set CORS headers
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+app.use('/contacts', contactsRouter);
 
 // Serve the HTML file containing the form
 app.get('/', function (req, res) {
